@@ -7,16 +7,14 @@ import java.text.SimpleDateFormat;
 import java.awt.*;
 
 public class MyHealthTrainer extends JFrame {
-	/*요일 
-	*days[calendar.get(Calendar.DAY_OF_WEEK)-1 는 오늘 요일을 나타내는 값
-	*/
-	Calendar calendar = Calendar.getInstance();
-    String []days = {"일","월","화","수","목","금","토"};
-
+	//요일
+	private Calendar calendar = Calendar.getInstance();
+    private String[] days = {"일","월","화","수","목","금","토"};
+    private String yoil = days[calendar.get(Calendar.DAY_OF_WEEK)-1];
 	//날짜
-	Date date = new Date();
-	SimpleDateFormat sdformat = new SimpleDateFormat("yyyy년 MM월 dd일"); 
-	String today = sdformat.format(date);
+	private Date date = new Date();
+	private SimpleDateFormat sdformat = new SimpleDateFormat("yyyy년 MM월 dd일"); 
+	private String today = sdformat.format(date);
 	
 	/*설정변수
 	 * purposeOption 1:벌크업 2:다이어트 3:힘증가
@@ -55,12 +53,27 @@ public class MyHealthTrainer extends JFrame {
 		
 		//1.헬스루틴
 		routinePanel.setLayout(null);
+		//1-1 날짜,시간
+		JLabel label_2 = new JLabel(today+" "+yoil+"요일");
+		label_2.setFont(new Font("굴림", Font.BOLD, 17));
+		label_2.setBounds(0, 0, 209, 30);
+		routinePanel.add(label_2);
 		
 		//2.식단
 		dietPanel.setLayout(null);
+		//2-1 날짜,시간
+		JLabel label_1 = new JLabel(today+" "+yoil+"요일");
+		label_1.setFont(new Font("굴림", Font.BOLD, 17));
+		label_1.setBounds(0, 0, 209, 30);
+		dietPanel.add(label_1);
 		
 		//3.동기부여
 		motivationPanel.setLayout(null);
+		//3-1 날짜,시간
+		JLabel label = new JLabel(today+" "+yoil+"요일");
+		label.setFont(new Font("굴림", Font.BOLD, 17));
+		label.setBounds(0, 0, 209, 30);
+		motivationPanel.add(label);
 		
 		//4.설정
 		optionPanel.setLayout(null);
@@ -129,18 +142,11 @@ public class MyHealthTrainer extends JFrame {
 		locationButton.add(bt4);
 		locationButton.add(bt5);
 		
-		//4-3 설정 시간
-		JLabel datelb = new JLabel("현재 날짜:"+today);
+		//4-3 날짜,요일
+		JLabel datelb = new JLabel(today+" "+yoil+"요일");
 		datelb.setFont(new Font("굴림", Font.BOLD, 17));
-		datelb.setBounds(0, 0, 227, 30);
+		datelb.setBounds(0, 0, 209, 30);
 		optionPanel.add(datelb);
-		
-		//4-3 요일
-		JLabel yoillb = new JLabel("오늘은  "+days[calendar.get(Calendar.DAY_OF_WEEK)-1]+"요일");
-		yoillb.setForeground(new Color(139, 69, 19));
-		yoillb.setFont(new Font("굴림", Font.BOLD, 17));
-		yoillb.setBounds(233, 8, 123, 15);
-		optionPanel.add(yoillb);
 		
 		//메인프레임 셋팅
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
