@@ -1,8 +1,14 @@
 package JAVAGUI;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.util.*;
 import java.awt.event.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.awt.*;
 
@@ -17,7 +23,9 @@ public class MyHealthTrainer extends JFrame {
 	private String today = sdformat.format(date);
 
 	/*
-	 * 설정변수 purposeOption 1:벌크업 2:다이어트 3:힘증가 locationOption 1:집 2:헬스장
+	 * 설정변수 
+	 * purposeOption 1:벌크업 2:다이어트 3:힘증가 
+	 * locationOption 1:집 2:헬스장
 	 */
 	private int purposeOption = 0;
 	private int locationOption = 0;
@@ -91,16 +99,27 @@ public class MyHealthTrainer extends JFrame {
 		label.setFont(new Font("굴림", Font.BOLD, 17));
 		label.setBounds(0, 0, 209, 30);
 		motivationPanel.add(label);
-
-		// 3-2 오늘의 영상
-		JLabel videolb = new JLabel("\uC624\uB298\uC758 \uC601\uC0C1");
-		videolb.setBounds(65, 86, 70, 15);
-		motivationPanel.add(videolb);
-
-		// 3-3 오늘의 사진
-		JLabel piclb = new JLabel("\uC624\uB298\uC758 \uC0AC\uC9C4");
-		piclb.setBounds(65, 151, 70, 15);
-		motivationPanel.add(piclb);
+		
+		//3-2 오늘의 사진
+		JButton picbt = new JButton("\uC624\uB298\uC758 \uC0AC\uC9C4");
+		picbt.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if(purposeOption==1) {
+					new ImageLoad("C:\\Users\\JUNG\\Desktop\\자바 프로젝트\\동기부여1.jpg");
+				} else if (purposeOption==2) {
+					new ImageLoad("C:\\Users\\JUNG\\Desktop\\자바 프로젝트\\동기부여2.jpg");
+				} else if (purposeOption==3) {
+					new ImageLoad("C:\\Users\\JUNG\\Desktop\\자바 프로젝트\\동기부여3.png");
+				}
+			}
+		});
+		picbt.setBounds(150, 87, 103, 23);
+		motivationPanel.add(picbt);
+		
+		//3-3 오늘의 영상
+		JButton vidbt = new JButton("\uC624\uB298\uC758 \uC601\uC0C1");
+		vidbt.setBounds(150, 159, 103, 23);
+		motivationPanel.add(vidbt);
 	}
 
 	public void OptionPanel() {
