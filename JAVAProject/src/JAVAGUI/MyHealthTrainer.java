@@ -118,6 +118,11 @@ public class MyHealthTrainer extends JFrame {
 		
 		//3-3 ø¿¥√¿« øµªÛ
 		JButton vidbt = new JButton("\uC624\uB298\uC758 \uC601\uC0C1");
+		vidbt.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				new VideoLink("https://www.youtube.com/watch?v=v6iQnGq55po");
+			}
+		});
 		vidbt.setBounds(150, 159, 103, 23);
 		motivationPanel.add(vidbt);
 	}
