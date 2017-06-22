@@ -1,14 +1,8 @@
 package JAVAGUI;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.util.*;
 import java.awt.event.*;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.awt.*;
 
@@ -17,7 +11,6 @@ public class MyHealthTrainer extends JFrame {
 	private Calendar calendar = Calendar.getInstance();
 	private String[] days = { "일", "월", "화", "수", "목", "금", "토" };
 	private String yoil = days[calendar.get(Calendar.DAY_OF_WEEK) - 1];
-
 	private Date date = new Date();
 	private SimpleDateFormat sdformat = new SimpleDateFormat("yyyy년 MM월 dd일");
 	private String today = sdformat.format(date);
@@ -38,6 +31,7 @@ public class MyHealthTrainer extends JFrame {
 	private JPanel dietPanel;
 	private JPanel motivationPanel;
 	private JPanel optionPanel;
+	private JPanel diaryPanel;
 
 	public MyHealthTrainer() {
 		mainFrame = new JFrame();
@@ -51,16 +45,19 @@ public class MyHealthTrainer extends JFrame {
 		dietPanel = new JPanel();
 		motivationPanel = new JPanel();
 		optionPanel = new JPanel();
+		diaryPanel = new JPanel();
 
 		mainPanel.add("헬스루틴", routinePanel);
 		mainPanel.add("식단", dietPanel);
 		mainPanel.add("동기부여", motivationPanel);
 		mainPanel.add("설정", optionPanel);
+		mainPanel.add("기록실",diaryPanel);
 
 		RoutinePanel();
 		DietPanel();
 		MotivationPanel();
 		OptionPanel();
+		DiaryPanel();
 
 		// 메인프레임 셋팅
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -104,14 +101,56 @@ public class MyHealthTrainer extends JFrame {
 		JButton picbt = new JButton("\uC624\uB298\uC758 \uC0AC\uC9C4");
 		picbt.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if(purposeOption==1) {
-					new ImageLoad("C:\\Users\\JUNG\\Desktop\\자바 프로젝트\\동기부여1.jpg");
-				} else if (purposeOption==2) {
-					new ImageLoad("C:\\Users\\JUNG\\Desktop\\자바 프로젝트\\동기부여2.jpg");
-				} else if (purposeOption==3) {
-					new ImageLoad("C:\\Users\\JUNG\\Desktop\\자바 프로젝트\\동기부여3.png");
+				if(purposeOption==1){
+					if(yoil=="월"){
+						new ImageLoad("motivationImage//bul//bul1.jpg");
+					}else if(yoil=="화"){
+						new ImageLoad("motivationImage//bul//bul2.jpg");
+					}else if(yoil=="수"){
+						new ImageLoad("motivationImage//bul//bul3.jpg");
+					}else if(yoil=="목"){
+						new ImageLoad("motivationImage//bul//bul4.jpg");
+					}else if(yoil=="금"){
+						new ImageLoad("motivationImage//bul//bul5.jpg");
+					}else if(yoil=="토"){
+						new ImageLoad("motivationImage//bul//bul6.jpg");
+					}else if(yoil=="일"){
+						JOptionPane.showMessageDialog(null,"오늘은 쉬는날!");
+					}
+				}else if(purposeOption==2){
+					if(yoil=="월"){
+						new ImageLoad("motivationImage//diet//diet1.jpg");
+					}else if(yoil=="화"){
+						new ImageLoad("motivationImage//diet//diet2.jpg");
+					}else if(yoil=="수"){
+						new ImageLoad("motivationImage//diet//diet3.jpg");
+					}else if(yoil=="목"){
+						new ImageLoad("motivationImage//diet//diet4.jpg");
+					}else if(yoil=="금"){
+						new ImageLoad("motivationImage//diet//diet5.jpg");
+					}else if(yoil=="토"){
+						new ImageLoad("motivationImage//diet//diet6.jpg");
+					}else if(yoil=="일"){
+						JOptionPane.showMessageDialog(null,"오늘은 쉬는날!");
+					}
+				}else if(purposeOption==3){
+					if(yoil=="월"){
+						new ImageLoad("motivationImage//func//func1.jpg");
+					}else if(yoil=="화"){
+						new ImageLoad("motivationImage//func//func2.jpg");
+					}else if(yoil=="수"){
+						new ImageLoad("motivationImage//func//func3.jpg");
+					}else if(yoil=="목"){
+						new ImageLoad("motivationImage//func//func4.jpg");
+					}else if(yoil=="금"){
+						new ImageLoad("motivationImage//func//func5.jpg");
+					}else if(yoil=="토"){
+						new ImageLoad("motivationImage//func//func6.jpg");
+					}else if(yoil=="일"){
+						JOptionPane.showMessageDialog(null,"오늘은 쉬는날!");
+					}
 				}
-			}
+			}	
 		});
 		picbt.setBounds(150, 87, 103, 23);
 		motivationPanel.add(picbt);
@@ -120,7 +159,12 @@ public class MyHealthTrainer extends JFrame {
 		JButton vidbt = new JButton("\uC624\uB298\uC758 \uC601\uC0C1");
 		vidbt.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				new VideoLink("https://www.youtube.com/watch?v=v6iQnGq55po");
+				if(locationOption==1){
+					new VideoLink("https://www.youtube.com/watch?v=I0PLnLDxYV4");
+				} else if (locationOption==2){
+					new VideoLink("https://www.youtube.com/watch?v=n-uWtKO6JDo");
+				}
+				
 			}
 		});
 		vidbt.setBounds(150, 159, 103, 23);
@@ -154,13 +198,13 @@ public class MyHealthTrainer extends JFrame {
 		bt2.setBounds(148, 105, 79, 23);
 		optionPanel.add(bt2);
 
-		JRadioButton bt3 = new JRadioButton("\uD798\uC99D\uAC00(\uAE30\uB2A5\uC131 \uC6B4\uB3D9)");
+		JRadioButton bt3 = new JRadioButton("\uAE30\uB2A5\uC131 \uC6B4\uB3D9");
 		bt3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				purposeOption = 3;
 			}
 		});
-		bt3.setBounds(231, 105, 140, 23);
+		bt3.setBounds(231, 105, 110, 23);
 		optionPanel.add(bt3);
 
 		ButtonGroup purposeButton = new ButtonGroup();
@@ -201,6 +245,17 @@ public class MyHealthTrainer extends JFrame {
 		datelb.setBounds(0, 0, 209, 30);
 		optionPanel.add(datelb);
 
+	}
+	
+	// 5. 일지
+	public void DiaryPanel(){
+		//5-1
+		diaryPanel.setLayout(null);
+		//5-2 날짜,요일
+		JLabel label = new JLabel("2017\uB144 06\uC6D4 22\uC77C \uBAA9\uC694\uC77C");
+		label.setFont(new Font("굴림", Font.BOLD, 17));
+		label.setBounds(0, 0, 209, 30);
+		diaryPanel.add(label);
 	}
 
 	public static void main(String[] ar) {
