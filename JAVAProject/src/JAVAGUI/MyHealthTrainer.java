@@ -7,14 +7,18 @@ import java.text.SimpleDateFormat;
 import java.awt.*;
 
 public class MyHealthTrainer extends JFrame {
-	// 날짜, 요일
+	// 날짜, 요일, 일
 	private Calendar calendar = Calendar.getInstance();
 	private String[] days = { "일", "월", "화", "수", "목", "금", "토" };
 	private String yoil = days[calendar.get(Calendar.DAY_OF_WEEK) - 1];
+	
 	private Date date = new Date();
 	private SimpleDateFormat sdformat = new SimpleDateFormat("yyyy년 MM월 dd일");
 	private String today = sdformat.format(date);
-
+	
+	private SimpleDateFormat sdformat2 = new SimpleDateFormat("dd");
+	private String day1 = sdformat2.format(date);
+	private int il = Integer.parseInt(day1);
 	/*
 	 * 설정변수 
 	 * purposeOption 1:벌크업 2:다이어트 3:힘증가 
@@ -102,52 +106,106 @@ public class MyHealthTrainer extends JFrame {
 		picbt.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(purposeOption==1){
-					if(yoil=="월"){
-						new ImageLoad("motivationImage//bul//bul1.jpg");
-					}else if(yoil=="화"){
-						new ImageLoad("motivationImage//bul//bul2.jpg");
-					}else if(yoil=="수"){
-						new ImageLoad("motivationImage//bul//bul3.jpg");
-					}else if(yoil=="목"){
-						new ImageLoad("motivationImage//bul//bul4.jpg");
-					}else if(yoil=="금"){
-						new ImageLoad("motivationImage//bul//bul5.jpg");
-					}else if(yoil=="토"){
-						new ImageLoad("motivationImage//bul//bul6.jpg");
-					}else if(yoil=="일"){
-						JOptionPane.showMessageDialog(null,"오늘은 쉬는날!");
+					if (il >= 1 && il<=14) {
+						if (yoil == "월") {
+							new ImageLoad("motivationImage//bul//bul1.jpg");
+						} else if (yoil == "화") {
+							new ImageLoad("motivationImage//bul//bul2.jpg");
+						} else if (yoil == "수") {
+							new ImageLoad("motivationImage//bul//bul3.jpg");
+						} else if (yoil == "목") {
+							new ImageLoad("motivationImage//bul//bul4.jpg");
+						} else if (yoil == "금") {
+							new ImageLoad("motivationImage//bul//bul5.jpg");
+						} else if (yoil == "토") {
+							new ImageLoad("motivationImage//bul//bul6.jpg");
+						} else if (yoil == "일") {
+							JOptionPane.showMessageDialog(null, "오늘은 쉬는날!");
+						}
+					} else if (il>=15){
+						if (yoil == "월") {
+							new ImageLoad("motivationImage//bul//bul7.jpg");
+						} else if (yoil == "화") {
+							new ImageLoad("motivationImage//bul//bul8.jpg");
+						} else if (yoil == "수") {
+							new ImageLoad("motivationImage//bul//bul9.jpg");
+						} else if (yoil == "목") {
+							new ImageLoad("motivationImage//bul//bul10.jpg");
+						} else if (yoil == "금") {
+							new ImageLoad("motivationImage//bul//bul11.jpg");
+						} else if (yoil == "토") {
+							new ImageLoad("motivationImage//bul//bul12.jpg");
+						} else if (yoil == "일") {
+							JOptionPane.showMessageDialog(null, "오늘은 쉬는날!");
+						}
 					}
 				}else if(purposeOption==2){
-					if(yoil=="월"){
-						new ImageLoad("motivationImage//diet//diet1.jpg");
-					}else if(yoil=="화"){
-						new ImageLoad("motivationImage//diet//diet2.jpg");
-					}else if(yoil=="수"){
-						new ImageLoad("motivationImage//diet//diet3.jpg");
-					}else if(yoil=="목"){
-						new ImageLoad("motivationImage//diet//diet4.jpg");
-					}else if(yoil=="금"){
-						new ImageLoad("motivationImage//diet//diet5.jpg");
-					}else if(yoil=="토"){
-						new ImageLoad("motivationImage//diet//diet6.jpg");
-					}else if(yoil=="일"){
-						JOptionPane.showMessageDialog(null,"오늘은 쉬는날!");
+					if (il >= 1 && il <= 14) {
+						if (yoil == "월") {
+							new ImageLoad("motivationImage//diet//diet1.jpg");
+						} else if (yoil == "화") {
+							new ImageLoad("motivationImage//diet//diet2.jpg");
+						} else if (yoil == "수") {
+							new ImageLoad("motivationImage//diet//diet3.jpg");
+						} else if (yoil == "목") {
+							new ImageLoad("motivationImage//diet//diet4.jpg");
+						} else if (yoil == "금") {
+							new ImageLoad("motivationImage//diet//diet5.jpg");
+						} else if (yoil == "토") {
+							new ImageLoad("motivationImage//diet//diet6.jpg");
+						} else if (yoil == "일") {
+							JOptionPane.showMessageDialog(null, "오늘은 쉬는날!");
+						}
+					} else if (il>=15){
+						if (yoil == "월") {
+							new ImageLoad("motivationImage//diet//diet7.jpg");
+						} else if (yoil == "화") {
+							new ImageLoad("motivationImage//diet//diet8.jpg");
+						} else if (yoil == "수") {
+							new ImageLoad("motivationImage//diet//diet9.jpg");
+						} else if (yoil == "목") {
+							new ImageLoad("motivationImage//diet//diet10.jpg");
+						} else if (yoil == "금") {
+							new ImageLoad("motivationImage//diet//diet11.jpg");
+						} else if (yoil == "토") {
+							new ImageLoad("motivationImage//diet//diet12.jpg");
+						} else if (yoil == "일") {
+							JOptionPane.showMessageDialog(null, "오늘은 쉬는날!");
+						}
 					}
 				}else if(purposeOption==3){
-					if(yoil=="월"){
-						new ImageLoad("motivationImage//func//func1.jpg");
-					}else if(yoil=="화"){
-						new ImageLoad("motivationImage//func//func2.jpg");
-					}else if(yoil=="수"){
-						new ImageLoad("motivationImage//func//func3.jpg");
-					}else if(yoil=="목"){
-						new ImageLoad("motivationImage//func//func4.jpg");
-					}else if(yoil=="금"){
-						new ImageLoad("motivationImage//func//func5.jpg");
-					}else if(yoil=="토"){
-						new ImageLoad("motivationImage//func//func6.jpg");
-					}else if(yoil=="일"){
-						JOptionPane.showMessageDialog(null,"오늘은 쉬는날!");
+					if (il >= 1 && il <= 14) {
+						if (yoil == "월") {
+							new ImageLoad("motivationImage//func//func1.jpg");
+						} else if (yoil == "화") {
+							new ImageLoad("motivationImage//func//func2.jpg");
+						} else if (yoil == "수") {
+							new ImageLoad("motivationImage//func//func3.jpg");
+						} else if (yoil == "목") {
+							new ImageLoad("motivationImage//func//func4.jpg");
+						} else if (yoil == "금") {
+							new ImageLoad("motivationImage//func//func5.jpg");
+						} else if (yoil == "토") {
+							new ImageLoad("motivationImage//func//func6.jpg");
+						} else if (yoil == "일") {
+							JOptionPane.showMessageDialog(null, "오늘은 쉬는날!");
+						}
+					} else if (il>=15){
+						if (yoil == "월") {
+							new ImageLoad("motivationImage//func//func7.jpg");
+						} else if (yoil == "화") {
+							new ImageLoad("motivationImage//func//func8.jpg");
+						} else if (yoil == "수") {
+							new ImageLoad("motivationImage//func//func9.jpg");
+						} else if (yoil == "목") {
+							new ImageLoad("motivationImage//func//func10.jpg");
+						} else if (yoil == "금") {
+							new ImageLoad("motivationImage//func//func11.jpg");
+						} else if (yoil == "토") {
+							new ImageLoad("motivationImage//func//func12.jpg");
+						} else if (yoil == "일") {
+							JOptionPane.showMessageDialog(null, "오늘은 쉬는날!");
+						}
 					}
 				}
 			}	
