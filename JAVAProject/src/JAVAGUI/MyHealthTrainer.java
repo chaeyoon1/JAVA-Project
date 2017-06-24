@@ -41,6 +41,7 @@ public class MyHealthTrainer extends JFrame {
 	private JPanel dietPanel;
 	private JPanel motivationPanel;
 	private JPanel optionPanel;
+	private JPanel manualPanel;
 	
 	public MyHealthTrainer() {
 		mainFrame = new JFrame();
@@ -54,16 +55,19 @@ public class MyHealthTrainer extends JFrame {
 		dietPanel = new JPanel();
 		motivationPanel = new JPanel();
 		optionPanel = new JPanel();
+		manualPanel = new JPanel();
 		
 		mainPanel.add("헬스루틴", routinePanel);
 		mainPanel.add("식단", dietPanel);
 		mainPanel.add("동기부여", motivationPanel);
 		mainPanel.add("설정", optionPanel);
+		mainPanel.add("설명서",manualPanel);
 		
 		RoutinePanel();
 		DietPanel();
 		MotivationPanel();
 		OptionPanel();
+		ManualPanel();
 		
 		// 메인프레임 셋팅
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -688,6 +692,16 @@ public class MyHealthTrainer extends JFrame {
 		levelButton.add(bt6);
 		levelButton.add(bt7);
 		levelButton.add(bt8);
+	}
+	// 5. 운동, 식단 설명서
+	public void ManualPanel(){
+		// 5. 설명서
+		manualPanel.setLayout(null);
+		// 5-1 시간,요일
+		JLabel datelb = new JLabel(today + " " + yoil + "요일");
+		datelb.setFont(new Font("굴림", Font.BOLD, 17));
+		datelb.setBounds(0, 0, 209, 30);
+		manualPanel.add(datelb);
 	}
 	
 	public static void main(String[] ar) {
