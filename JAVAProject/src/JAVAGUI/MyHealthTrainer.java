@@ -322,6 +322,52 @@ public class MyHealthTrainer extends JFrame {
 		label_1.setFont(new Font("굴림", Font.BOLD, 17));
 		label_1.setBounds(0, 0, 209, 30);
 		dietPanel.add(label_1);
+		// 2-2 오늘의 식단
+		JButton button = new JButton("\uC624\uB298\uC758 \uC2DD\uB2E8");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(purposeOption==1){
+					if(yoil=="월"){
+						new ImageLoad("dietImage//벌크업 식단//벌월.png");
+					}else if(yoil=="화"){
+						new ImageLoad("dietImage//벌크업 식단//벌화.png");
+					}else if(yoil=="수"){
+						new ImageLoad("dietImage//벌크업 식단//벌수.png");
+					}else if(yoil=="목"){
+						new ImageLoad("dietImage//벌크업 식단//벌목.png");
+					}else if(yoil=="금"){
+						new ImageLoad("dietImage//벌크업 식단//벌금.png");
+					}else if(yoil=="토"){
+						new ImageLoad("dietImage//벌크업 식단//벌토.png");
+					}else if(yoil=="일"){
+						new ImageLoad("dietImage//벌크업 식단//벌일.png");
+					}
+				}else if(purposeOption==2){
+					if(yoil=="월"){
+						new ImageLoad("dietImage//다이어트 식단//다월.png");
+					}else if(yoil=="화"){
+						new ImageLoad("dietImage//다이어트 식단//다화.png");
+					}else if(yoil=="수"){
+						new ImageLoad("dietImage//다이어트 식단//다수.png");
+					}else if(yoil=="목"){
+						new ImageLoad("dietImage//다이어트 식단//다목.png");
+					}else if(yoil=="금"){
+						new ImageLoad("dietImage//다이어트 식단//다금.png");
+					}else if(yoil=="토"){
+						new ImageLoad("dietImage//다이어트 식단//다토.png");
+					}else if(yoil=="일"){
+						new ImageLoad("dietImage//다이어트 식단//다일.png");
+					}
+				}else if(purposeOption==3){
+					JOptionPane.showMessageDialog(null, "기능성 운동이 목적이라면 자유식!");
+				}else{
+					JOptionPane.showMessageDialog(null, "운동목적을 설정해 주세요");
+				}
+			}
+		});
+		button.setFont(new Font("굴림", Font.BOLD, 18));
+		button.setBounds(110, 92, 174, 61);
+		dietPanel.add(button);
 	}
 
 	public void MotivationPanel() {
@@ -336,6 +382,7 @@ public class MyHealthTrainer extends JFrame {
 		
 		//3-2 오늘의 사진
 		JButton picbt = new JButton("\uC624\uB298\uC758 \uC0AC\uC9C4");
+		picbt.setFont(new Font("굴림", Font.BOLD, 18));
 		picbt.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(purposeOption==1){
@@ -445,22 +492,89 @@ public class MyHealthTrainer extends JFrame {
 				}
 			}	
 		});
-		picbt.setBounds(150, 87, 103, 23);
+		picbt.setBounds(121, 56, 160, 54);
 		motivationPanel.add(picbt);
 		
 		//3-3 오늘의 영상
 		JButton vidbt = new JButton("\uC624\uB298\uC758 \uC601\uC0C1");
+		vidbt.setFont(new Font("굴림", Font.BOLD, 18));
 		vidbt.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(locationOption==1){
-					new VideoLink("https://www.youtube.com/watch?v=I0PLnLDxYV4");
+					if(il>=1&&il<=14){
+						if (yoil == "월") {
+							new VideoLink("https://www.youtube.com/watch?v=2JBbyNh7M2g");
+						} else if (yoil == "화") {
+							new VideoLink("https://www.youtube.com/watch?v=slKwlfDCosY");
+						} else if (yoil == "수") {
+							new VideoLink("https://www.youtube.com/watch?v=qWy_aOlB45Y");
+						} else if (yoil == "목") {
+							new VideoLink("https://www.youtube.com/watch?v=YdB1HMCldJY");
+						} else if (yoil == "금") {
+							new VideoLink("https://www.youtube.com/watch?v=mvJHw64fxgQ");
+						} else if (yoil == "토") {
+							new VideoLink("https://www.youtube.com/watch?v=aCk3l6lxc-s");
+						} else if (yoil == "일") {
+							JOptionPane.showMessageDialog(null, "오늘은 쉬는날!");
+						}
+					}else if(il>=15){
+						if (yoil == "월") {
+							new VideoLink("https://www.youtube.com/watch?v=WIHy-ZnSndA");
+						} else if (yoil == "화") {
+							new VideoLink("https://www.youtube.com/watch?v=hQU08BlmYG4");
+						} else if (yoil == "수") {
+							new VideoLink("https://www.youtube.com/watch?v=VHyGqsPOUHs");
+						} else if (yoil == "목") {
+							new VideoLink("https://www.youtube.com/watch?v=cGuItZpixAQ");
+						} else if (yoil == "금") {
+							new VideoLink("https://www.youtube.com/watch?v=jHeHp6jIdd8");
+						} else if (yoil == "토") {
+							new VideoLink("https://www.youtube.com/watch?v=mf4XVyxGrZQ");
+						} else if (yoil == "일") {
+							JOptionPane.showMessageDialog(null, "오늘은 쉬는날!");
+						}
+					}
 				} else if (locationOption==2){
-					new VideoLink("https://www.youtube.com/watch?v=n-uWtKO6JDo");
+					if(il>=1&&il<=14){
+						if (yoil == "월") {
+							new VideoLink("https://www.youtube.com/watch?v=at7QvbFy9fM");
+						} else if (yoil == "화") {
+							new VideoLink("https://www.youtube.com/watch?v=Bw2w3oCROR8");
+						} else if (yoil == "수") {
+							new VideoLink("https://www.youtube.com/watch?v=VlXXhLMiro8");
+						} else if (yoil == "목") {
+							new VideoLink("https://www.youtube.com/watch?v=7Xnndnwk6As");
+						} else if (yoil == "금") {
+							new VideoLink("https://www.youtube.com/watch?v=VeuvdtHKzF0");
+						} else if (yoil == "토") {
+							new VideoLink("https://www.youtube.com/watch?v=QM_GobcKsuQ");
+						} else if (yoil == "일") {
+							JOptionPane.showMessageDialog(null, "오늘은 쉬는날!");
+						}
+					}else if(il>=15){
+						if (yoil == "월") {
+							new VideoLink("https://www.youtube.com/watch?v=9NJcNcW1xH4");
+						} else if (yoil == "화") {
+							new VideoLink("https://www.youtube.com/watch?v=vPBBI28MkCU");
+						} else if (yoil == "수") {
+							new VideoLink("https://www.youtube.com/watch?v=zp1VS7fge34");
+						} else if (yoil == "목") {
+							new VideoLink("https://www.youtube.com/watch?v=BkUXGC03KvE");
+						} else if (yoil == "금") {
+							new VideoLink("https://www.youtube.com/watch?v=YsnAIM0vvO4");
+						} else if (yoil == "토") {
+							new VideoLink("https://www.youtube.com/watch?v=YdTyXyx9mMc");
+						} else if (yoil == "일") {
+							JOptionPane.showMessageDialog(null, "오늘은 쉬는날!");
+						}
+					}
+				} else {
+					JOptionPane.showMessageDialog(null, "운동위치를 설정해 주세요!");
 				}
 				
 			}
 		});
-		vidbt.setBounds(150, 159, 103, 23);
+		vidbt.setBounds(121, 128, 160, 54);
 		motivationPanel.add(vidbt);
 	}
 
