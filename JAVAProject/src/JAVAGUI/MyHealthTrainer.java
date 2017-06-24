@@ -7,6 +7,10 @@ import java.text.SimpleDateFormat;
 import java.awt.*;
 
 public class MyHealthTrainer extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	// 날짜, 요일, 일
 	private Calendar calendar = Calendar.getInstance();
 	private String[] days = { "일", "월", "화", "수", "목", "금", "토" };
@@ -23,10 +27,12 @@ public class MyHealthTrainer extends JFrame {
 	 * 설정변수 
 	 * purposeOption 1:벌크업 2:다이어트 3:힘증가 
 	 * locationOption 1:집 2:헬스장
+	 * levelOption 1:초급 2:중급 3:고급
 	 */
 	private int purposeOption = 0;
 	private int locationOption = 0;
-
+	private int levelOption = 0;
+	
 	// 메인프레임,메인패널
 	private JFrame mainFrame;
 	private JTabbedPane mainPanel;
@@ -35,8 +41,7 @@ public class MyHealthTrainer extends JFrame {
 	private JPanel dietPanel;
 	private JPanel motivationPanel;
 	private JPanel optionPanel;
-	private JPanel diaryPanel;
-
+	
 	public MyHealthTrainer() {
 		mainFrame = new JFrame();
 		mainFrame.setTitle("\uB098\uB9CC\uC758 \uD5EC\uC2A4 \uD2B8\uB808\uC774\uB108");
@@ -49,20 +54,17 @@ public class MyHealthTrainer extends JFrame {
 		dietPanel = new JPanel();
 		motivationPanel = new JPanel();
 		optionPanel = new JPanel();
-		diaryPanel = new JPanel();
-
+		
 		mainPanel.add("헬스루틴", routinePanel);
 		mainPanel.add("식단", dietPanel);
 		mainPanel.add("동기부여", motivationPanel);
 		mainPanel.add("설정", optionPanel);
-		mainPanel.add("기록실",diaryPanel);
-
+		
 		RoutinePanel();
 		DietPanel();
 		MotivationPanel();
 		OptionPanel();
-		DiaryPanel();
-
+		
 		// 메인프레임 셋팅
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainFrame.setSize(420, 320);
@@ -78,6 +80,237 @@ public class MyHealthTrainer extends JFrame {
 		label_2.setFont(new Font("굴림", Font.BOLD, 17));
 		label_2.setBounds(0, 0, 209, 30);
 		routinePanel.add(label_2);
+		
+		// 1-2 오늘의 운동
+		JButton btnNewButton = new JButton("\uC624\uB298\uC758 \uC6B4\uB3D9");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (yoil == "월") {
+					if (purposeOption == 1) {
+						if (locationOption == 2) {
+							if (levelOption == 1) {
+								new ImageLoad("routineImage//벌크//헬스장 초급//헬초월.png");
+							} else if (levelOption == 2) {
+								new ImageLoad("routineImage//벌크//헬스장 중급//헬중월.png");
+							} else if (levelOption == 3) {
+								new ImageLoad("routineImage//벌크//헬스장 고급//헬고월.png");
+							}
+						} else {
+							JOptionPane.showMessageDialog(null, "벌크업은 헬스장에서!\n" + "운동위치를 헬스장으로 바꿔주세요.");
+						}
+					} else if (purposeOption == 2) {
+						if (locationOption == 1) {
+							if (levelOption == 1) {
+								new ImageLoad("routineImage//다이어트//집//초급//다집초월.png");
+							} else if (levelOption == 2 || levelOption == 3) {
+								JOptionPane.showMessageDialog(null, "중,고급자용 다이어트는 헬스장에서!\n" + "운동위치를 헬스장으로 바꿔주세요.");
+							}
+						} else if (locationOption == 2) {
+							if (levelOption == 1) {
+								JOptionPane.showMessageDialog(null, "초급자용 다이어트는 집에서!\n" + "운동위치를 집으로 바꿔주세요.");
+							} else if (levelOption == 2 || levelOption == 3) {
+								new ImageLoad("routineImage//다이어트//헬스장//중급고급//다헬중고월.png");
+							}
+						}
+					} else if (purposeOption == 3) {
+						if (levelOption == 1) {
+							new ImageLoad("routineImage//기능성//초급//기초월,목.png");
+						} else if (levelOption == 2) {
+							new ImageLoad("routineImage//기능성//중급//기중월,목.png");
+						} else if (levelOption == 3) {
+							new ImageLoad("routineImage//기능성//고급//기고월,목.png");
+						}
+					}
+				} else if (yoil == "화") {
+					if (purposeOption == 1) {
+						if (locationOption == 2) {
+							if (levelOption == 1) {
+								new ImageLoad("routineImage//벌크//헬스장 초급//헬초화.png");
+							} else if (levelOption == 2) {
+								new ImageLoad("routineImage//벌크//헬스장 중급//헬중화.png");
+							} else if (levelOption == 3) {
+								new ImageLoad("routineImage//벌크//헬스장 고급//헬고화.png");
+							}
+						} else {
+							JOptionPane.showMessageDialog(null, "벌크업은 헬스장에서!\n" + "운동위치를 헬스장으로 바꿔주세요.");
+						}
+					} else if (purposeOption == 2) {
+						if (locationOption == 1) {
+							if (levelOption == 1) {
+								new ImageLoad("routineImage//다이어트//집//초급//다집초화.png");
+							} else if (levelOption == 2 || levelOption == 3) {
+								JOptionPane.showMessageDialog(null, "중,고급자용 다이어트는 헬스장에서!\n" + "운동위치를 헬스장으로 바꿔주세요.");
+							}
+						} else if (locationOption == 2) {
+							if (levelOption == 1) {
+								JOptionPane.showMessageDialog(null, "초급자용 다이어트는 집에서!\n" + "운동위치를 집으로 바꿔주세요.");
+							} else if (levelOption == 2 || levelOption == 3) {
+								new ImageLoad("routineImage//다이어트//헬스장//중급고급//다헬중고화.png");
+							}
+						}
+					} else if (purposeOption == 3) {
+						if (levelOption == 1) {
+							new ImageLoad("routineImage//기능성//초급//기초화,금.png");
+						} else if (levelOption == 2) {
+							new ImageLoad("routineImage//기능성//중급//기중화,금.png");
+						} else if (levelOption == 3) {
+							new ImageLoad("routineImage//기능성//고급//기고화,금.png");
+						}
+					}
+				} else if (yoil == "수") {
+					if (purposeOption == 1) {
+						if (locationOption == 2) {
+							if (levelOption == 1) {
+								new ImageLoad("routineImage//벌크//헬스장 초급//헬초수.png");
+							} else if (levelOption == 2) {
+								new ImageLoad("routineImage//벌크//헬스장 중급//헬중수.png");
+							} else if (levelOption == 3) {
+								new ImageLoad("routineImage//벌크//헬스장 고급//헬고수.png");
+							}
+						} else {
+							JOptionPane.showMessageDialog(null, "벌크업은 헬스장에서!\n" + "운동위치를 헬스장으로 바꿔주세요.");
+						}
+					} else if (purposeOption == 2) {
+						if (locationOption == 1) {
+							if (levelOption == 1) {
+								new ImageLoad("routineImage//다이어트//집//초급//다집초수.png");
+							} else if (levelOption == 2 || levelOption == 3) {
+								JOptionPane.showMessageDialog(null, "중,고급자용 다이어트는 헬스장에서!\n" + "운동위치를 헬스장으로 바꿔주세요.");
+							}
+						} else if (locationOption == 2) {
+							if (levelOption == 1) {
+								JOptionPane.showMessageDialog(null, "초급자용 다이어트는 집에서!\n" + "운동위치를 집으로 바꿔주세요.");
+							} else if (levelOption == 2 || levelOption == 3) {
+								new ImageLoad("routineImage//다이어트//헬스장//중급고급//다헬중고수.png");
+							}
+						}
+					} else if (purposeOption == 3) {
+						if (levelOption == 1) {
+							new ImageLoad("routineImage//기능성//초급//기초수,토.png");
+						} else if (levelOption == 2) {
+							new ImageLoad("routineImage//기능성//중급//기중수,토.png");
+						} else if (levelOption == 3) {
+							new ImageLoad("routineImage//기능성//고급//기고수,토.png");
+						}
+					}
+				} else if (yoil == "목") {
+					if (purposeOption == 1) {
+						if (locationOption == 2) {
+							if (levelOption == 1) {
+								new ImageLoad("routineImage//벌크//헬스장 초급//헬초목.png");
+							} else if (levelOption == 2) {
+								new ImageLoad("routineImage//벌크//헬스장 중급//헬중목.png");
+							} else if (levelOption == 3) {
+								new ImageLoad("routineImage//벌크//헬스장 고급//헬고목.png");
+							}
+						} else {
+							JOptionPane.showMessageDialog(null, "벌크업은 헬스장에서!\n" + "운동위치를 헬스장으로 바꿔주세요.");
+						}
+					} else if (purposeOption == 2) {
+						if (locationOption == 1) {
+							if (levelOption == 1) {
+								new ImageLoad("routineImage//다이어트//집//초급//다집초목.png");
+							} else if (levelOption == 2 || levelOption == 3) {
+								JOptionPane.showMessageDialog(null, "중,고급자용 다이어트는 헬스장에서!\n" + "운동위치를 헬스장으로 바꿔주세요.");
+							}
+						} else if (locationOption == 2) {
+							if (levelOption == 1) {
+								JOptionPane.showMessageDialog(null, "초급자용 다이어트는 집에서!\n" + "운동위치를 집으로 바꿔주세요.");
+							} else if (levelOption == 2 || levelOption == 3) {
+								new ImageLoad("routineImage//다이어트//헬스장//중급고급//다헬중고목.png");
+							}
+						}
+					} else if (purposeOption == 3) {
+						if (levelOption == 1) {
+							new ImageLoad("routineImage//기능성//초급//기초월,목.png");
+						} else if (levelOption == 2) {
+							new ImageLoad("routineImage//기능성//중급//기중월,목.png");
+						} else if (levelOption == 3) {
+							new ImageLoad("routineImage//기능성//고급//기고월,목.png");
+						}
+					}
+				} else if (yoil == "금") {
+					if (purposeOption == 1) {
+						if (locationOption == 2) {
+							if (levelOption == 1) {
+								new ImageLoad("routineImage//벌크//헬스장 초급//헬초금.png");
+							} else if (levelOption == 2) {
+								new ImageLoad("routineImage//벌크//헬스장 중급//헬중금.png");
+							} else if (levelOption == 3) {
+								new ImageLoad("routineImage//벌크//헬스장 고급//헬고금.png");
+							}
+						} else {
+							JOptionPane.showMessageDialog(null, "벌크업은 헬스장에서!\n" + "운동위치를 헬스장으로 바꿔주세요.");
+						}
+					} else if (purposeOption == 2) {
+						if (locationOption == 1) {
+							if (levelOption == 1) {
+								new ImageLoad("routineImage//다이어트//집//초급//다집초금.png");
+							} else if (levelOption == 2 || levelOption == 3) {
+								JOptionPane.showMessageDialog(null, "중,고급자용 다이어트는 헬스장에서!\n" + "운동위치를 헬스장으로 바꿔주세요.");
+							}
+						} else if (locationOption == 2) {
+							if (levelOption == 1) {
+								JOptionPane.showMessageDialog(null, "초급자용 다이어트는 집에서!\n" + "운동위치를 집으로 바꿔주세요.");
+							} else if (levelOption == 2 || levelOption == 3) {
+								new ImageLoad("routineImage//다이어트//헬스장//중급고급//다헬중고금.png");
+							}
+						}
+					} else if (purposeOption == 3) {
+						if (levelOption == 1) {
+							new ImageLoad("routineImage//기능성//초급//기초화,금.png");
+						} else if (levelOption == 2) {
+							new ImageLoad("routineImage//기능성//중급//기중화,금.png");
+						} else if (levelOption == 3) {
+							new ImageLoad("routineImage//기능성//고급//기고화,금.png");
+						}
+					}
+				} else if (yoil == "토") {
+					if (purposeOption == 1) {
+						if (locationOption == 2) {
+							if (levelOption == 1) {
+								new ImageLoad("routineImage//벌크//헬스장 초급//헬초토.png");
+							} else if (levelOption == 2) {
+								new ImageLoad("routineImage//벌크//헬스장 중급//헬중토.png");
+							} else if (levelOption == 3) {
+								new ImageLoad("routineImage//벌크//헬스장 고급//헬고토.png");
+							}
+						} else {
+							JOptionPane.showMessageDialog(null, "벌크업은 헬스장에서!\n" + "운동위치를 헬스장으로 바꿔주세요.");
+						}
+					} else if (purposeOption == 2) {
+						if (locationOption == 1) {
+							if (levelOption == 1) {
+								new ImageLoad("routineImage//다이어트//집//초급//다집초토.png");
+							} else if (levelOption == 2 || levelOption == 3) {
+								JOptionPane.showMessageDialog(null, "중,고급자용 다이어트는 헬스장에서!\n" + "운동위치를 헬스장으로 바꿔주세요.");
+							}
+						} else if (locationOption == 2) {
+							if (levelOption == 1) {
+								JOptionPane.showMessageDialog(null, "초급자용 다이어트는 집에서!\n" + "운동위치를 집으로 바꿔주세요.");
+							} else if (levelOption == 2 || levelOption == 3) {
+								new ImageLoad("routineImage//다이어트//헬스장//중급고급//다헬중고토.png");
+							}
+						}
+					} else if (purposeOption == 3) {
+						if (levelOption == 1) {
+							new ImageLoad("routineImage//기능성//초급//기초수,토.png");
+						} else if (levelOption == 2) {
+							new ImageLoad("routineImage//기능성//중급//기중수,토.png");
+						} else if (levelOption == 3) {
+							new ImageLoad("routineImage//기능성//고급//기고수,토.png");
+						}
+					}
+				} else if (yoil == "일") {
+					JOptionPane.showMessageDialog(null, "일요일은 휴식~");
+				} else {
+					JOptionPane.showMessageDialog(null, "설정을 완료해 주세요");
+				}
+			}
+		});
+		btnNewButton.setFont(new Font("굴림", Font.BOLD, 18));
+		btnNewButton.setBounds(110, 92, 174, 61);
+		routinePanel.add(btnNewButton);
 	}
 
 	public void DietPanel() {
@@ -207,6 +440,8 @@ public class MyHealthTrainer extends JFrame {
 							JOptionPane.showMessageDialog(null, "오늘은 쉬는날!");
 						}
 					}
+				} else {
+					JOptionPane.showMessageDialog(null, "운동목적을 설정해 주세요!");
 				}
 			}	
 		});
@@ -235,7 +470,7 @@ public class MyHealthTrainer extends JFrame {
 
 		// 4-1 운동목적
 		JLabel lb1 = new JLabel("\uC6B4\uB3D9\uBAA9\uC801");
-		lb1.setBounds(12, 109, 57, 15);
+		lb1.setBounds(12, 152, 57, 15);
 		optionPanel.add(lb1);
 
 		JRadioButton bt1 = new JRadioButton("\uBC8C\uD06C\uC5C5");
@@ -244,7 +479,7 @@ public class MyHealthTrainer extends JFrame {
 				purposeOption = 1;
 			}
 		});
-		bt1.setBounds(74, 105, 70, 23);
+		bt1.setBounds(74, 148, 70, 23);
 		optionPanel.add(bt1);
 
 		JRadioButton bt2 = new JRadioButton("\uB2E4\uC774\uC5B4\uD2B8");
@@ -253,16 +488,16 @@ public class MyHealthTrainer extends JFrame {
 				purposeOption = 2;
 			}
 		});
-		bt2.setBounds(148, 105, 79, 23);
+		bt2.setBounds(148, 148, 79, 23);
 		optionPanel.add(bt2);
 
-		JRadioButton bt3 = new JRadioButton("\uAE30\uB2A5\uC131 \uC6B4\uB3D9");
+		JRadioButton bt3 = new JRadioButton("\uAE30\uB2A5\uC131 \uC6B4\uB3D9 (\uCCB4\uC870)");
 		bt3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				purposeOption = 3;
 			}
 		});
-		bt3.setBounds(231, 105, 110, 23);
+		bt3.setBounds(231, 148, 143, 23);
 		optionPanel.add(bt3);
 
 		ButtonGroup purposeButton = new ButtonGroup();
@@ -272,7 +507,7 @@ public class MyHealthTrainer extends JFrame {
 
 		// 4-2 운동위치
 		JLabel lb2 = new JLabel("\uC6B4\uB3D9\uC704\uCE58");
-		lb2.setBounds(12, 150, 57, 15);
+		lb2.setBounds(12, 106, 57, 15);
 		optionPanel.add(lb2);
 
 		JRadioButton bt4 = new JRadioButton("\uC9D1");
@@ -281,7 +516,7 @@ public class MyHealthTrainer extends JFrame {
 				locationOption = 1;
 			}
 		});
-		bt4.setBounds(74, 146, 70, 23);
+		bt4.setBounds(74, 102, 70, 23);
 		optionPanel.add(bt4);
 
 		JRadioButton bt5 = new JRadioButton("\uD5EC\uC2A4\uC7A5");
@@ -290,7 +525,7 @@ public class MyHealthTrainer extends JFrame {
 				locationOption = 2;
 			}
 		});
-		bt5.setBounds(148, 146, 79, 23);
+		bt5.setBounds(148, 102, 79, 23);
 		optionPanel.add(bt5);
 
 		ButtonGroup locationButton = new ButtonGroup();
@@ -302,20 +537,45 @@ public class MyHealthTrainer extends JFrame {
 		datelb.setFont(new Font("굴림", Font.BOLD, 17));
 		datelb.setBounds(0, 0, 209, 30);
 		optionPanel.add(datelb);
-
+		
+		//4-4 등급
+		JLabel lb3 = new JLabel("\uB4F1\uAE09");
+		lb3.setBounds(10, 40, 39, 15);
+		optionPanel.add(lb3);
+		
+		JRadioButton bt6 = new JRadioButton("\uCD08\uAE09(6\uAC1C\uC6D4 \uBBF8\uB9CC)");
+		bt6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				levelOption=1;
+			}
+		});
+		bt6.setBounds(74, 36, 123, 23);
+		optionPanel.add(bt6);
+		
+		JRadioButton bt7 = new JRadioButton("\uC911\uAE09(6\uAC1C\uC6D4 \uC774\uC0C1 2\uB144 \uBBF8\uB9CC)");
+		bt7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				levelOption=2;
+			}
+		});
+		bt7.setBounds(201, 36, 173, 23);
+		optionPanel.add(bt7);
+		
+		JRadioButton bt8 = new JRadioButton("\uACE0\uAE09(2\uB144 \uC774\uC0C1)");
+		bt8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				levelOption=3;
+			}
+		});
+		bt8.setBounds(74, 61, 121, 23);
+		optionPanel.add(bt8);
+		
+		ButtonGroup levelButton = new ButtonGroup();
+		levelButton.add(bt6);
+		levelButton.add(bt7);
+		levelButton.add(bt8);
 	}
 	
-	// 5. 일지
-	public void DiaryPanel(){
-		//5-1
-		diaryPanel.setLayout(null);
-		//5-2 날짜,요일
-		JLabel label = new JLabel("2017\uB144 06\uC6D4 22\uC77C \uBAA9\uC694\uC77C");
-		label.setFont(new Font("굴림", Font.BOLD, 17));
-		label.setBounds(0, 0, 209, 30);
-		diaryPanel.add(label);
-	}
-
 	public static void main(String[] ar) {
 		new MyHealthTrainer();
 	}

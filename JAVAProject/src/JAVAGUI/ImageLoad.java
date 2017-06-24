@@ -19,13 +19,13 @@ public class ImageLoad extends JFrame {
 			JOptionPane.showMessageDialog(null, "NO IMAGE!");
 		}
 		//사이즈는 이미지의 실사이즈와 동일
-		setSize(bufferedImage.getWidth(),bufferedImage.getHeight());
+		setSize(bufferedImage.getWidth(),bufferedImage.getHeight()+36);
 		setVisible(true);
 	}
 
-		public void paint(Graphics g) {
-		//이미지 그리기
+	public void paint(Graphics g) {
+		// 이미지 그리기
 		if (this.bufferedImage != null)
-			g.drawImage(this.bufferedImage, 0, 0, this);
+			g.drawImage(this.bufferedImage, 0, 29, this);
 	}
 }
