@@ -507,33 +507,33 @@ public class MyHealthTrainer extends JFrame {
 				if(locationOption==1){
 					if(il>=1&&il<=14){
 						if (yoil == "월") {
-							new VideoLink("https://www.youtube.com/watch?v=2JBbyNh7M2g");
+							new SiteLink("https://www.youtube.com/watch?v=2JBbyNh7M2g");
 						} else if (yoil == "화") {
-							new VideoLink("https://www.youtube.com/watch?v=slKwlfDCosY");
+							new SiteLink("https://www.youtube.com/watch?v=slKwlfDCosY");
 						} else if (yoil == "수") {
-							new VideoLink("https://www.youtube.com/watch?v=qWy_aOlB45Y");
+							new SiteLink("https://www.youtube.com/watch?v=qWy_aOlB45Y");
 						} else if (yoil == "목") {
-							new VideoLink("https://www.youtube.com/watch?v=YdB1HMCldJY");
+							new SiteLink("https://www.youtube.com/watch?v=YdB1HMCldJY");
 						} else if (yoil == "금") {
-							new VideoLink("https://www.youtube.com/watch?v=mvJHw64fxgQ");
+							new SiteLink("https://www.youtube.com/watch?v=mvJHw64fxgQ");
 						} else if (yoil == "토") {
-							new VideoLink("https://www.youtube.com/watch?v=aCk3l6lxc-s");
+							new SiteLink("https://www.youtube.com/watch?v=aCk3l6lxc-s");
 						} else if (yoil == "일") {
 							JOptionPane.showMessageDialog(null, "오늘은 쉬는날!");
 						}
 					}else if(il>=15){
 						if (yoil == "월") {
-							new VideoLink("https://www.youtube.com/watch?v=WIHy-ZnSndA");
+							new SiteLink("https://www.youtube.com/watch?v=WIHy-ZnSndA");
 						} else if (yoil == "화") {
-							new VideoLink("https://www.youtube.com/watch?v=hQU08BlmYG4");
+							new SiteLink("https://www.youtube.com/watch?v=hQU08BlmYG4");
 						} else if (yoil == "수") {
-							new VideoLink("https://www.youtube.com/watch?v=VHyGqsPOUHs");
+							new SiteLink("https://www.youtube.com/watch?v=VHyGqsPOUHs");
 						} else if (yoil == "목") {
-							new VideoLink("https://www.youtube.com/watch?v=cGuItZpixAQ");
+							new SiteLink("https://www.youtube.com/watch?v=cGuItZpixAQ");
 						} else if (yoil == "금") {
-							new VideoLink("https://www.youtube.com/watch?v=jHeHp6jIdd8");
+							new SiteLink("https://www.youtube.com/watch?v=jHeHp6jIdd8");
 						} else if (yoil == "토") {
-							new VideoLink("https://www.youtube.com/watch?v=mf4XVyxGrZQ");
+							new SiteLink("https://www.youtube.com/watch?v=mf4XVyxGrZQ");
 						} else if (yoil == "일") {
 							JOptionPane.showMessageDialog(null, "오늘은 쉬는날!");
 						}
@@ -541,33 +541,33 @@ public class MyHealthTrainer extends JFrame {
 				} else if (locationOption==2){
 					if(il>=1&&il<=14){
 						if (yoil == "월") {
-							new VideoLink("https://www.youtube.com/watch?v=at7QvbFy9fM");
+							new SiteLink("https://www.youtube.com/watch?v=at7QvbFy9fM");
 						} else if (yoil == "화") {
-							new VideoLink("https://www.youtube.com/watch?v=Bw2w3oCROR8");
+							new SiteLink("https://www.youtube.com/watch?v=Bw2w3oCROR8");
 						} else if (yoil == "수") {
-							new VideoLink("https://www.youtube.com/watch?v=VlXXhLMiro8");
+							new SiteLink("https://www.youtube.com/watch?v=VlXXhLMiro8");
 						} else if (yoil == "목") {
-							new VideoLink("https://www.youtube.com/watch?v=7Xnndnwk6As");
+							new SiteLink("https://www.youtube.com/watch?v=7Xnndnwk6As");
 						} else if (yoil == "금") {
-							new VideoLink("https://www.youtube.com/watch?v=VeuvdtHKzF0");
+							new SiteLink("https://www.youtube.com/watch?v=VeuvdtHKzF0");
 						} else if (yoil == "토") {
-							new VideoLink("https://www.youtube.com/watch?v=QM_GobcKsuQ");
+							new SiteLink("https://www.youtube.com/watch?v=QM_GobcKsuQ");
 						} else if (yoil == "일") {
 							JOptionPane.showMessageDialog(null, "오늘은 쉬는날!");
 						}
 					}else if(il>=15){
 						if (yoil == "월") {
-							new VideoLink("https://www.youtube.com/watch?v=9NJcNcW1xH4");
+							new SiteLink("https://www.youtube.com/watch?v=9NJcNcW1xH4");
 						} else if (yoil == "화") {
-							new VideoLink("https://www.youtube.com/watch?v=vPBBI28MkCU");
+							new SiteLink("https://www.youtube.com/watch?v=vPBBI28MkCU");
 						} else if (yoil == "수") {
-							new VideoLink("https://www.youtube.com/watch?v=zp1VS7fge34");
+							new SiteLink("https://www.youtube.com/watch?v=zp1VS7fge34");
 						} else if (yoil == "목") {
-							new VideoLink("https://www.youtube.com/watch?v=BkUXGC03KvE");
+							new SiteLink("https://www.youtube.com/watch?v=BkUXGC03KvE");
 						} else if (yoil == "금") {
-							new VideoLink("https://www.youtube.com/watch?v=YsnAIM0vvO4");
+							new SiteLink("https://www.youtube.com/watch?v=YsnAIM0vvO4");
 						} else if (yoil == "토") {
-							new VideoLink("https://www.youtube.com/watch?v=YdTyXyx9mMc");
+							new SiteLink("https://www.youtube.com/watch?v=YdTyXyx9mMc");
 						} else if (yoil == "일") {
 							JOptionPane.showMessageDialog(null, "오늘은 쉬는날!");
 						}
@@ -697,11 +697,226 @@ public class MyHealthTrainer extends JFrame {
 	public void ManualPanel(){
 		// 5. 설명서
 		manualPanel.setLayout(null);
-		// 5-1 시간,요일
-		JLabel datelb = new JLabel(today + " " + yoil + "요일");
-		datelb.setFont(new Font("굴림", Font.BOLD, 17));
-		datelb.setBounds(0, 0, 209, 30);
-		manualPanel.add(datelb);
+		//5-1 운동종류
+		JLabel lblNewLabel = new JLabel("\uC6B4\uB3D9 \uC885\uB958 \uC124\uBA85");
+		lblNewLabel.setBounds(0, 10, 93, 15);
+		manualPanel.add(lblNewLabel);
+		
+		JButton btnNewButton_1 = new JButton("\uBCA4\uCE58 \uD504\uB808\uC2A4");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				new SiteLink("https://namu.wiki/w/벤치%20프레스");
+			}
+		});
+		btnNewButton_1.setBounds(0, 25, 132, 23);
+		manualPanel.add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("\uB525\uC2A4");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("https://namu.wiki/w/%EB%94%A5%EC%8A%A4");
+			}
+		});
+		btnNewButton_2.setBounds(138, 25, 124, 23);
+		manualPanel.add(btnNewButton_2);
+		
+		JButton btnNewButton_3 = new JButton("\uBC00\uB9AC\uD130\uB9AC \uD504\uB808\uC2A4");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("https://namu.wiki/w/%ED%94%84%EB%A0%88%EC%8A%A4");
+			}
+		});
+		btnNewButton_3.setBounds(267, 107, 132, 23);
+		manualPanel.add(btnNewButton_3);
+		
+		JButton btnNewButton_4 = new JButton("\uB370\uB4DC \uB9AC\uD504\uD2B8");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("https://namu.wiki/w/%EB%8D%B0%EB%93%9C%EB%A6%AC%ED%94%84%ED%8A%B8");
+			}
+		});
+		btnNewButton_4.setBounds(0, 52, 132, 23);
+		manualPanel.add(btnNewButton_4);
+		
+		JButton btnNewButton_5 = new JButton("\uD131\uAC78\uC774");
+		btnNewButton_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("https://namu.wiki/w/%ED%84%B1%EA%B1%B8%EC%9D%B4");
+			}
+		});
+		btnNewButton_5.setBounds(138, 52, 124, 23);
+		manualPanel.add(btnNewButton_5);
+		
+		JButton btnNewButton_6 = new JButton("\uBC14\uBCA8 \uB85C\uC6B0");
+		btnNewButton_6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("https://namu.wiki/w/%EB%B0%94%EB%B2%A8%20%EB%A1%9C%EC%9A%B0");
+			}
+		});
+		btnNewButton_6.setBounds(267, 52, 132, 23);
+		manualPanel.add(btnNewButton_6);
+		
+		JButton btnNewButton_7 = new JButton("\uC2A4\uCFFC\uD2B8");
+		btnNewButton_7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("https://namu.mirror.wiki/w/%EC%8A%A4%EC%BF%BC%ED%8A%B8");
+			}
+		});
+		btnNewButton_7.setBounds(0, 80, 132, 23);
+		manualPanel.add(btnNewButton_7);
+		
+		JButton btnNewButton_8 = new JButton("\uD30C\uC6CC\uB808\uADF8 \uD504\uB808\uC2A4");
+		btnNewButton_8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("https://zetawiki.com/wiki/%EB%A0%88%EA%B7%B8_%ED%94%84%EB%A0%88%EC%8A%A4");
+			}
+		});
+		btnNewButton_8.setBounds(138, 80, 124, 23);
+		manualPanel.add(btnNewButton_8);
+		
+		JButton btnNewButton_9 = new JButton("\uB808\uADF8 \uC775\uC2A4\uD150\uC158");
+		btnNewButton_9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("http://blog.naver.com/PostView.nhn?blogId=ngeljin1&logNo=220578706591&parentCategoryNo=&categoryNo=14&viewDate=&isShowPopularPosts=false&from=section");
+			}
+		});
+		btnNewButton_9.setBounds(267, 80, 132, 23);
+		manualPanel.add(btnNewButton_9);
+		
+		JButton btnNewButton_10 = new JButton("\uD478\uC26C\uC5C5");
+		btnNewButton_10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("https://namu.wiki/w/%ED%8C%94%EA%B5%BD%ED%98%80%ED%8E%B4%EA%B8%B0");
+			}
+		});
+		btnNewButton_10.setBounds(267, 25, 132, 23);
+		manualPanel.add(btnNewButton_10);
+		
+		JButton btnNewButton_11 = new JButton("\uC6D0\uC554 \uB364\uBCA8 \uB85C\uC6B0");
+		btnNewButton_11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("http://www.gwhey.com/m/board.html?code=proteinz_board13&page=1&type=v&num1=999858&num2=00000&number=143&lock=N");
+			}
+		});
+		btnNewButton_11.setBounds(138, 107, 124, 23);
+		manualPanel.add(btnNewButton_11);
+		
+		JButton btnNewButton_12 = new JButton("\uB808\uADF8 \uCEEC");
+		btnNewButton_12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("http://blog.naver.com/PostView.nhn?blogId=andra12&logNo=220668852146");
+			}
+		});
+		btnNewButton_12.setBounds(0, 107, 132, 23);
+		manualPanel.add(btnNewButton_12);
+		
+		JButton btnNewButton_13 = new JButton("\uBC14\uBCA8/\uB364\uBCA8 \uCEEC");
+		btnNewButton_13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("https://namu.wiki/w/%EB%B0%94%EB%B2%A8%20%EC%BB%AC");
+			}
+		});
+		btnNewButton_13.setBounds(0, 133, 132, 23);
+		manualPanel.add(btnNewButton_13);
+		
+		JButton btnNewButton_14 = new JButton("\uD2B8\uB77C\uC774\uC149 \uC775\uC2A4\uD150\uC158");
+		btnNewButton_14.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("https://www.msn.com/ko-kr/health/exercise/strength/%ED%8A%B8%EB%9D%BC%EC%9D%B4%EC%85%89%EC%8A%A4-%EC%9D%B5%EC%8A%A4%ED%85%90%EC%85%98-%EB%B0%94%EB%B2%A8-%EC%98%A4%EB%B2%84%ED%97%A4%EB%93%9C-%EC%95%89%EC%9D%80-%EC%9E%90%EC%84%B8/ss-BBtSSRB");
+			}
+		});
+		btnNewButton_14.setBounds(138, 133, 124, 23);
+		manualPanel.add(btnNewButton_14);
+		
+		JButton btnNewButton_15 = new JButton("\uB808\uD130\uB7F4 \uB808\uC774\uC988");
+		btnNewButton_15.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("https://namu.wiki/w/%EB%9E%98%ED%84%B0%EB%9F%B4%20%EB%A0%88%EC%9D%B4%EC%A6%88");
+			}
+		});
+		btnNewButton_15.setBounds(267, 133, 132, 23);
+		manualPanel.add(btnNewButton_15);
+		
+		JButton button = new JButton("\uD589\uC789 \uB808\uADF8\uB808\uC774\uC988");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("http://blog.naver.com/PostView.nhn?blogId=sudveie875&logNo=220736849117");
+			}
+		});
+		button.setBounds(0, 160, 132, 23);
+		manualPanel.add(button);
+		
+		JButton btnNewButton_16 = new JButton("\uD06C\uB7F0\uCE58");
+		btnNewButton_16.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("https://namu.wiki/w/%EC%9C%97%EB%AA%B8%20%EC%9D%BC%EC%9C%BC%ED%82%A4%EA%B8%B0");
+			}
+		});
+		btnNewButton_16.setBounds(138, 160, 124, 23);
+		manualPanel.add(btnNewButton_16);
+		
+		JButton btnNewButton_17 = new JButton("\uD50C\uB7AD\uD06C");
+		btnNewButton_17.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("https://namu.wiki/w/%ED%94%8C%EB%9E%AD%ED%81%AC");
+			}
+		});
+		btnNewButton_17.setBounds(267, 160, 132, 23);
+		manualPanel.add(btnNewButton_17);
+		
+		JButton btnNewButton_18 = new JButton("\uCE74\uD504 \uB808\uC774\uC988");
+		btnNewButton_18.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("http://ybyb.tistory.com/28");
+			}
+		});
+		btnNewButton_18.setBounds(0, 187, 132, 23);
+		manualPanel.add(btnNewButton_18);
+		
+		JButton btnNewButton_19 = new JButton("\uBA38\uC2AC\uC5C5");
+		btnNewButton_19.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("http://knpark1227.tistory.com/23");
+			}
+		});
+		btnNewButton_19.setBounds(138, 187, 124, 23);
+		manualPanel.add(btnNewButton_19);
+		
+		JButton btnNewButton_20 = new JButton("\uD50C\uB780\uCCB4");
+		btnNewButton_20.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("http://blog.naver.com/PostView.nhn?blogId=spm0808&logNo=40165104061&categoryNo=124&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1");
+			}
+		});
+		btnNewButton_20.setBounds(267, 187, 132, 23);
+		manualPanel.add(btnNewButton_20);
+		
+		JButton btnNewButton_21 = new JButton("\uD504\uB860\uD2B8 \uB808\uBC84");
+		btnNewButton_21.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("https://m.blog.naver.com/PostView.nhn?blogId=spm0808&logNo=40165068186&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F");
+			}
+		});
+		btnNewButton_21.setBounds(0, 213, 132, 23);
+		manualPanel.add(btnNewButton_21);
+		
+		JButton btnNewButton_22 = new JButton("\uBC31 \uB808\uBC84");
+		btnNewButton_22.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("https://m.blog.naver.com/PostView.nhn?blogId=spm0808&logNo=40164989072&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F");
+			}
+		});
+		btnNewButton_22.setBounds(138, 213, 124, 23);
+		manualPanel.add(btnNewButton_22);
+		
+		JButton btnNewButton_23 = new JButton("\uC5D8 \uC2EF");
+		btnNewButton_23.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new SiteLink("https://m.blog.naver.com/PostView.nhn?blogId=spm0808&logNo=40164935067&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F");
+			}
+		});
+		btnNewButton_23.setBounds(267, 213, 132, 23);
+		manualPanel.add(btnNewButton_23);
 	}
 	
 	public static void main(String[] ar) {
